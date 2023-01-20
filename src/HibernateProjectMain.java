@@ -35,6 +35,7 @@ public class HibernateProjectMain {
         person2.setAddress(addresses1);
         session.save(person2);
         session.save(person3);
+        System.out.println("hi");
 
         session.getTransaction().commit();
         session.clear();
