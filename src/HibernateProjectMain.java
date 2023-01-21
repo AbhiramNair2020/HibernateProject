@@ -16,13 +16,13 @@ public class HibernateProjectMain {
             .addAnnotatedClass(Person.class).addAnnotatedClass(Address.class).buildSessionFactory();
     public static void main(String[] args) throws InterruptedException {
         Session session = sessionFactory.openSession();
+        System.out.println("test");
         session.beginTransaction();
         List<Address> addresses = new ArrayList<>();
         Person person = new Person(1,"John");
         addresses.add(new Address(1,"Toronto"));
         addresses.add(new Address(2,"Calgary"));
-        addresses.add(new Address(3,"Oslo"));
-        addresses.add(new Address(4,"Madrid"));
+        addresses.add(new Address(3,"Moncton"));
         Person person2 = new Person(2,"Mat");
         List<Address> addresses1 = new ArrayList<>();
         addresses1.add(new Address(5,"Colombo"));
